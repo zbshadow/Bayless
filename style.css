@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:600i&display=swap');
+
+
+/*Setting up Page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  background-color: #191A1E;
+}
+
+/*Header and Nav Bar */
+header {
+  font-size: 100%;
+  line-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  color: #7e7e7e;
+}
+
+header img {
+  height: 75px;
+  width: auto;
+}
+
+header img:hover {
+  cursor: pointer;
+}
+
+header ul {
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  list-style: none;
+  margin-left: auto;
+  align-items: center;
+}
+
+header li {
+  padding: 10px;
+  margin: 20px;
+}
+
+header li:hover {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+#navGit img {
+  height: 35px;
+  width: auto;
+}
+
+#navLinked img {
+  height: 30px;
+  width: auto;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.2);
+}
+
+/* Setting up underline animation for each link*/
+.navBtn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.navBtn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #1371f5;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.navBtn:hover:before, .navBtn:focus:before, .navBtn:active:before {
+  left: 0;
+  right: 0;
+}
+
+/*pushing body of page down below header.*/
+/* Maybe a better method?*/
+main {
+  padding-top: 137.5px;
+}
+
+/*Starting the about section styling*/
+#aboutDiv1 {
+  min-height: 800px;
+  width: 100%;
+  margin-right: 50px;
+}
+
+#ii {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+
+#aboutDiv2, #aboutDiv3 {
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+}
+
+#aboutDiv2 {
+  background-color: rgb(26, 25, 25);
+  margin-right: 100px;
+  border-radius: 5px;
+}
+
+#aboutDiv2 img {
+  height: auto;
+  width: 250px;
+  box-shadow: 0 0 3px whitesmoke;
+}
+
+#aboutDiv3 {
+  color: rgb(114, 114, 114);
+  font-family: sans-serif;
+  text-align: left;
+  line-height: 35px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+  font-size: 150%;
+  display: block;
+}
+
+#aboutDiv3 h2 {
+  padding-bottom: 15px;
+  color: whitesmoke;
+}
+
+/*Resume Button*/
+.btn {
+  background-color: dodgerblue;
+  border: 3px solid dodgerblue;
+  margin-top: 40px;
+  color: white;
+  border-radius: 15px;
+  width: 175px;
+  text-align: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: transparent;
+  color: dodgerblue;
+}
+
+/*Projects Section*/
+#projects {
+  background: #8e9eab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 1000px;
+  width: 100%;
+}
+
+/*contact Section*/
+#contact {
+  background: #00c6ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  min-height: 500px;
+  width: 100%;
+}
