@@ -11,17 +11,17 @@
 
 a:link {
   text-decoration: none;
-  color: #7e7e7e;
+  color: white;
 }
 
 a:visited {
   text-decoration: none;
-  color: #7e7e7e;
+  color: white;
 }
 
 a:active {
   text-decoration: none;
-  color: #7e7e7e;
+  color: white;
 }
 
 
@@ -43,6 +43,14 @@ header {
   display: flex;
   align-items: center;
   color: #7e7e7e;
+}
+
+.burger  div{
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 8px 20px;
+  display: none;
 }
 
 header img {
@@ -191,7 +199,6 @@ main {
   cursor: pointer;
   transition-duration: 0.3s;
   background-color: transparent;
-  color: dodgerblue;
 }
 
 /**/
@@ -209,7 +216,7 @@ main {
 
 .text--medium {
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: white;
@@ -241,7 +248,7 @@ main {
 }
 
 .card:hover {
-  box-shadow: 0 0 10px #191A1E;
+  box-shadow: 0 0 20px #191A1E;
 }
 
 /*Image of Cards*/
@@ -304,9 +311,9 @@ main {
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: .3s;
   animation-name: fade;
-  animation-duration: 11.5s;
+  animation-duration: 1s;
 }
 
 /*webkit for fade*/
@@ -331,7 +338,13 @@ main {
 .card__info {
   display: flex;
   align-self: flex-end;
-  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.card__text {
+  display: flexbox;
+  margin-bottom: 10px;
 }
 
 .card__git {
@@ -340,6 +353,7 @@ main {
   background-color: #303032;
   border-radius: 20px;
   transition: all .3s ease-in-out;
+  display: flexbox;
 }
 
 .card__git:hover {
@@ -416,16 +430,151 @@ form .submit:hover {
 
 
 /*Responsiveness*/
+@media only screen and (max-width: 1550px){
+  .contact-title h1{
+    font-size: 28px;
+  }
+
+  .contact-title h2{
+    font-size: 12px;
+  }
+
+  .form-control {
+    width: 500px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1300px){
+  .contact-title h1{
+    font-size: 20px;
+  }
+
+  .contact-title h2{
+    font-size: 14px;
+  }
+
+  .form-control {
+    width: 400px;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .card {
     grid-column-end: span 6;
   }
+
+  .contactDiv {
+    width: 70%;
+  }
+
+  .contact-title h1{
+    font-size: 28px;
+  }
+
+  .contact-title h2{
+    font-size: 14px;
+  }
+
+  .form-control {
+    width: 400px;
+  }
+
+  header li {
+    padding: 0px;
+    margin: 10px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
+body {
+  overflow-x: hidden;
+}
+
+.grow:hover {
+  transform: none;
+}
+
+.nav-links {
+  position: absolute;
+  margin: 0px;
+  right: 0px;
+  width: 50%;
+  height: auto;
+  top: 75px;
+  background-color: #444444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
+}
+.burger {
+  position: flex;
+  margin-left: 150px;
+  cursor: pointer;
+}
+
+.burger div{
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.nav-links li{
+  width: 100%;
+  margin: 0px;
+  padding: 20px 0px;
+  opacity: 0;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-8px,6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-8px,-6px);
+}
+
   .card {
     grid-column-end: span 12;
     grid-gap: 20px;
+  }
+
+  .contactDiv {
+    width: 90%;
+    margin: 10px;
+  }
+
+  #ii {
+    flex-direction: column;
+  }
+
+  #aboutDiv2 {
+    margin-right: 0;
+  }
+
+  #aboutDiv3 {
+    font-size: 125%;
+    margin-left: 0;
   }
 }
 
@@ -436,6 +585,23 @@ form .submit:hover {
   
   .card {
     grid-column-end: span 12;
+  }
+
+  .contact-title h1{
+    font-size: 16px;
+  }
+
+  .contact-title h2{
+    font-size: 14px;
+  }
+
+  .form-control {
+    width: 300px;
+  }
+
+  #aboutDiv3 {
+    font-size: 100%;
+    line-height: 20px;
   }
 }
 
